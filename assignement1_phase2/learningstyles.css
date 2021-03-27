@@ -1,0 +1,31 @@
+h2{
+    color: red;
+}
+.heads{
+    color: blue;
+}
+#heads{
+    color: green;
+}
+h1{
+    font-family: cursive;
+    font-size: 50px;
+}
+.bulletin{
+    list-style:square;
+
+}
+a{
+    text-decoration: none;
+    font-family: cursive;
+    color: aqua;
+}
+a:hover{
+    color: brown;
+}
+.box{
+    border: 2px solid black;
+    margin: 5;
+    padding-left: 40%;
+   
+}
