@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+
+    <title>ToDo</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="signup-form content">
+      <form
+        method="post"
+        class="form-horizontal"
+        style="padding-top: 0px; padding-bottom: 0px"
+      >
+        <div class="col-xs-8 col-xs-offset-4">
+          <h1>Login</h1>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-xs-4 signp">Username</label>
+          <div class="col-xs-8">
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              autocomplete="off"
+              style="padding-left: 10px; font-size: 16px"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-xs-4 signp">Password</label>
+          <div class="col-xs-8">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              style="padding-left: 10px; font-size: 16px"
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-xs-8 col-xs-offset-4">
+            <button
+              type="submit"
+              onsubmit="false"
+              class="btn btn-primary btn-lg log"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          var id = $("#username").val();
+          var pwd = $("#password").val();
+          if (pwd == "" || id == "") {
+            $("#trial").html("ttt");
+            alert("Fields cannot be empty");
+          } else if (id == "admin" && pwd == "12345") {
+            redirect();
+          } else {
+            alert("Try Again");
+          }
+        });
+      });
+      function redirect() {
+        $("form").attr("action", "welcome.html");
+      }
+    </script>
+  </body>
+</html>
