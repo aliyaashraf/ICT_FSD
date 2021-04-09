@@ -8,7 +8,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script1.js"></script>
 
     <title>ToDo</title>
   </head>
@@ -69,7 +69,7 @@
           var id = $("#username").val();
           var pwd = $("#password").val();
           if (pwd == "" || id == "") {
-            $("#trial").html("ttt");
+            
             alert("Fields cannot be empty");
           } else if (id == "admin" && pwd == "12345") {
             redirect();
@@ -79,7 +79,7 @@
         });
       });
       function redirect() {
-        $("form").attr("action", "welcome.html");
+        $("form").attr("action", "./welcome.html");
       }
     </script>
   </body>
