@@ -8,7 +8,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="script1.js"></script>
 
     <title>ToDo</title>
   </head>
@@ -65,9 +64,13 @@
     </div>
     <script>
       $(document).ready(function () {
-        $("button").click(function () {
+        
+        $("button").click(function (e) {
+           e.preventDefault();
           var id = $("#username").val();
           var pwd = $("#password").val();
+          console.log(id);
+          console.log(pwd);
           if (pwd == "" || id == "") {
             
             alert("Fields cannot be empty");
@@ -79,8 +82,12 @@
         });
       });
       function redirect() {
-        $("form").attr("action", "./welcome.html");
+        
+        // $("form").attr("action", "welcome.html");
+        location.href = 'welcome.html';
+        
       }
+     
     </script>
   </body>
 </html>
